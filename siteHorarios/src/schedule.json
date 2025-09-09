@@ -1,0 +1,60 @@
+{
+  "schedule": {
+    "monday": [
+      { "subject": "Physics and Chemistry (FQA)", "start": "08:20", "end": "09:20", "room": "1.13" },
+      { "type": "break", "duration": 5 },
+      { "subject": "Biology and Geology (BG11A2)", "start": "09:25", "end": "10:25", "room": "1.14 / 2.15" },
+      { "type": "break", "duration": 10 },
+      { "subject": "Portuguese (PORT)", "start": "10:35", "end": "12:05", "room": "1.13" },
+      { "type": "break", "duration": 10 },
+      { "subject": "Physics and Chemistry (FQA)", "start": "12:15", "end": "13:15", "room": "1.13" },
+      { "subject": "Biology and Geology (BG11A1)", "start": "13:15", "end": "13:45", "room": "LBG" },
+      { "type": "lunch", "start": "13:45", "end": "14:50" },
+      { "subject": "Mathematics (MAT A)", "start": "14:50", "end": "16:20", "room": "1.13" },
+      { "type": "break", "duration": 10 },
+      { "subject": "English (ING)", "start": "16:30", "end": "17:30", "room": "1.13" },
+      { "type": "break", "duration": 5 },
+      { "subject": "Physical Education (PE)", "start": "17:35", "end": "18:35", "room": "BOX" }
+    ],
+    "tuesday": [
+      { "subject": "Biology and Geology (BG11A2)", "start": "08:20", "end": "09:20", "room": "1.14" },
+      { "subject": "Geometria Descritiva (GDA)", "start": "08:20", "end": "09:20", "room": "0.06" },
+      { "type": "break", "duration": 5 },
+      { "subject": "Biology and Geology (BG11A1)", "start": "09:25", "end": "10:55", "room": "0.06" },
+      { "type": "break", "duration": 10 },
+      { "subject": "Philosophy (FIL)", "start": "11:05", "end": "12:35", "room": "1.13" },
+      { "type": "break", "duration": 10 },
+      { "subject": "Portuguese (PORT)", "start": "12:45", "end": "13:45", "room": "1.13" }
+    ],
+    "wednesday": [
+      { "subject": "Physics and Chemistry (FQA)", "start": "08:20", "end": "09:20", "room": "1.13 / 0.06" },
+      { "type": "break", "duration": 5 },
+      { "subject": "Biology and Geology (BG11A2)", "start": "09:25", "end": "10:55", "room": "1.14 / ECON A / GDA" },
+      { "type": "break", "duration": 10 },
+      { "subject": "Mathematics (MAT A)", "start": "11:05", "end": "12:05", "room": "1.13" },
+      { "type": "break", "duration": 10 },
+      { "subject": "Physical Education (PE)", "start": "12:15", "end": "13:15", "room": "BOX" }
+    ],
+    "thursday": [
+      { "subject": "Biology and Geology (BG11A2)", "start": "08:20", "end": "09:50", "room": "ECON A / GDA / 1.13 / 0.18 / 0.06" },
+      { "type": "break", "duration": 15 },
+      { "subject": "Mathematics (MAT A)", "start": "10:05", "end": "11:35", "room": "1.13" },
+      { "type": "break", "duration": 10 },
+      { "subject": "English (ING)", "start": "11:45", "end": "13:15", "room": "1.13" },
+      { "type": "lunch", "start": "13:15", "end": "14:20" },
+      { "subject": "Physics and Chemistry (FQA)", "start": "14:20", "end": "15:50", "room": "ECON A / GDA / 0.18 / 0.06" },
+      { "type": "break", "duration": 10 },
+      { "subject": "Biology and Geology (BG11A1)", "start": "16:00", "end": "17:00", "room": "0.20" },
+      { "subject": "Biology and Geology (BG11A2) + Physics and Chemistry (FQA)", "start": "16:00", "end": "17:30", "room": "LBG / LFQ" }
+    ],
+    "friday": [
+      { "subject": "Physics and Chemistry (FQA)", "start": "08:20", "end": "09:50", "room": "1.13 / 0.06" },
+      { "type": "break", "duration": 10 },
+      { "subject": "Philosophy (FIL)", "start": "10:00", "end": "11:00", "room": "1.13" },
+      { "type": "break", "duration": 5 },
+      { "subject": "Mathematics (MAT A)", "start": "11:05", "end": "12:05", "room": "1.13" },
+      { "type": "break", "duration": 10 },
+      { "subject": "Portuguese (PORT)", "start": "12:15", "end": "13:15", "room": "1.13" }
+    ]
+  }
+}
