@@ -27,7 +27,7 @@ function App() {
 
   useEffect(() => {
     const updateSchedule = () => {
-      const now = "8:45";
+      const now = getLisbonTime();
       const nowMinutes = toMinutes(now);
 
       const days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
