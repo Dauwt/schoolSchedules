@@ -102,8 +102,8 @@ function Homepage() {
                 {currentInfo.entries.map((c, i) => (
                   <li key={i} className="class-info">
                     <span className="class-info-name">{c.subject}</span> <br />
-                    Room: {c.room} <br />
-                    Ends at: {c.end}
+                    Sala: {c.room} <br />
+                    Acaba às: {c.end}
                   </li>
                 ))}
               </ul>
@@ -113,7 +113,7 @@ function Homepage() {
               <div className="info">
                 <p className="currentTitle">Intervalo</p>
                 <p className="break-info">
-                  Ends at: <span className="break-info-time">{currentInfo.end}</span>
+                  Acaba às: <span className="break-info-time">{currentInfo.end}</span>
                 </p>
               </div>
               <div className="next-classes">
@@ -123,8 +123,8 @@ function Homepage() {
                       {currentInfo.nextClass.map((c, i) => (
                         <li key={i} className="next-class-info">
                           <span className="next-class-info-name">{c.subject}</span> <br />
-                          Room: {c.room} <br />
-                          Ends at: {c.end}
+                          Sala: {c.room} <br />
+                          Acaba às: {c.end}
                         </li>
                       ))}
                     </ul>
@@ -135,7 +135,7 @@ function Homepage() {
             <div className="info">
               <p className="currentTitle">Intervalo de Almoço</p>
               <p>
-                Ends at: <span className="lunchBreak-info">{currentInfo.end}</span>
+                Acaba às: <span className="lunchBreak-info">{currentInfo.end}</span>
               </p>
             </div>
           )
