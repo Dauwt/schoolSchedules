@@ -31,11 +31,11 @@ function Homepage() {
 
   useEffect(() => {
     const updateSchedule = () => {
-      const now = "12:07" //getLisbonTime();
+      const now = getLisbonTime();
       const nowMinutes = toMinutes(now);
 
       const days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
-      const today = days[1] //new Date().getDay()];
+      const today = days[new Date().getDay()];
 
       const todaySchedule = scheduleData.schedule[today] || [];
 
