@@ -27,14 +27,15 @@ console.log(getLisbonTime())
 
 function Homepage() {
   const [currentInfo, setCurrentInfo] = useState(null);
+  const [showNextClasses, setShowNextClasses] = useState(false);
 
   useEffect(() => {
     const updateSchedule = () => {
-      const now = getLisbonTime();
+      const now = "12:07" //getLisbonTime();
       const nowMinutes = toMinutes(now);
 
       const days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
-      const today = days[new Date().getDay()];
+      const today = days[1] //new Date().getDay()];
 
       const todaySchedule = scheduleData.schedule[today] || [];
 
@@ -43,8 +44,9 @@ function Homepage() {
         if (entry.type === "break") return false;
         if (entry.type === "lunch") {
           return nowMinutes >= toMinutes(entry.start) && nowMinutes < toMinutes(entry.end);
+        } else if (entry.type === "class") {
+          return nowMinutes >= toMinutes(entry.start) && nowMinutes < toMinutes(entry.end);
         }
-        return nowMinutes >= toMinutes(entry.start) && nowMinutes < toMinutes(entry.end);
       });
 
       // Check if in a break
@@ -63,8 +65,14 @@ function Homepage() {
             if (prev && next) {
               const start = toMinutes(prev.end);
               const end = toMinutes(next.start);
+              const activeNext = todaySchedule.filter((entry) => {
+                if (entry.type === "class") {
+                  return toMinutes(next.start) >= toMinutes(entry.start) && toMinutes(next.start) < toMinutes(entry.end);
+                }
+              });
+
               if (nowMinutes >= start && nowMinutes < end) {
-                activeInfo = { type: "break", start: prev.end, end: next.start };
+                activeInfo = { type: "break", start: prev.end, end: next.start, nextClass: activeNext };
               }
             }
           } else if (entry.type === "lunch") {
@@ -101,12 +109,28 @@ function Homepage() {
               </ul>
             </div>
           ) : currentInfo.type === "break" ? (
-            <div className="info">
-              <p className="currentTitle">Intervalo</p>
-              <p className="break-info">
-                Ends at: <span className="break-info-time">{currentInfo.end}</span>
-              </p>
-            </div>
+            <>
+              <div className="info">
+                <p className="currentTitle">Intervalo</p>
+                <p className="break-info">
+                  Ends at: <span className="break-info-time">{currentInfo.end}</span>
+                </p>
+              </div>
+              <div className="next-classes">
+                  <button className="button-next-classes" onClick={() => setShowNextClasses(!showNextClasses)}>Próxima Aula</button>
+                  {showNextClasses && (
+                    <ul className="next-classes-list">
+                      {currentInfo.nextClass.map((c, i) => (
+                        <li key={i} className="next-class-info">
+                          <span className="next-class-info-name">{c.subject}</span> <br />
+                          Room: {c.room} <br />
+                          Ends at: {c.end}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </>
           ) : (
             <div className="info">
               <p className="currentTitle">Intervalo de Almoço</p>
